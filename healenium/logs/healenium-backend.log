@@ -1,0 +1,216 @@
+2023-05-11 10:00:00.120  INFO 1 - [       main] com.epam.healenium.Application   : Starting Application using Java 1.8.0_212 on d1c7a4aaf482 with PID 1 (/healenium-backend.jar started by root in /) 
+2023-05-11 10:00:00.130  INFO 1 - [       main] com.epam.healenium.Application   : No active profile set, falling back to 1 default profile: "default" 
+2023-05-11 10:00:04.263  INFO 1 - [       main] .RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode. 
+2023-05-11 10:00:05.067  INFO 1 - [       main] .RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 776 ms. Found 4 JPA repository interfaces. 
+2023-05-11 10:00:07.579  INFO 1 - [       main] o.s.b.w.e.t.TomcatWebServer      : Tomcat initialized with port(s): 7878 (http) 
+2023-05-11 10:00:07.615  INFO 1 - [       main] o.a.c.core.StandardService       : Starting service [Tomcat] 
+2023-05-11 10:00:07.617  INFO 1 - [       main] o.a.c.core.StandardEngine        : Starting Servlet engine: [Apache Tomcat/9.0.64] 
+2023-05-11 10:00:07.911  INFO 1 - [       main] o.a.c.c.C.[.[localhost].[/]      : Initializing Spring embedded WebApplicationContext 
+2023-05-11 10:00:07.914  INFO 1 - [       main] rvletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 7619 ms 
+2023-05-11 10:00:08.812  INFO 1 - [       main] c.z.hikari.HikariDataSource      : HikariPool-1 - Starting... 
+2023-05-11 10:00:09.032  INFO 1 - [       main] c.z.hikari.HikariDataSource      : HikariPool-1 - Start completed. 
+2023-05-11 10:00:09.281  INFO 1 - [       main] liquibase.database               : Set default schema name to healenium 
+2023-05-11 10:00:09.550  INFO 1 - [       main] liquibase.lockservice            : Successfully acquired change log lock 
+2023-05-11 10:00:11.023  INFO 1 - [       main] liquibase.changelog              : Creating database history table with name: healenium.databasechangelog 
+2023-05-11 10:00:11.046  INFO 1 - [       main] liquibase.changelog              : Reading from healenium.databasechangelog 
+2023-05-11 10:00:11.424  INFO 1 - [       main] liquibase.changelog              : Sequence healing_result_seq created 
+2023-05-11 10:00:11.428  INFO 1 - [       main] liquibase.changelog              : ChangeSet changelog/001_createSequence.xml::3::nkobzev ran successfully in 10ms 
+2023-05-11 10:00:11.450  INFO 1 - [       main] liquibase.changelog              : Table SELECTOR created 
+2023-05-11 10:00:11.452  INFO 1 - [       main] liquibase.changelog              : ChangeSet changelog/002_selector.xml::5::nkobzev ran successfully in 13ms 
+2023-05-11 10:00:11.499  INFO 1 - [       main] liquibase.changelog              : Index SELECTOR_PK created 
+2023-05-11 10:00:11.501  INFO 1 - [       main] liquibase.changelog              : ChangeSet changelog/002_selector.xml::6::nkobzev ran successfully in 45ms 
+2023-05-11 10:00:11.517  INFO 1 - [       main] liquibase.changelog              : Table HEALING created 
+2023-05-11 10:00:11.519  INFO 1 - [       main] liquibase.changelog              : ChangeSet changelog/003_healing.xml::7::nkobzev ran successfully in 8ms 
+2023-05-11 10:00:11.555  INFO 1 - [       main] liquibase.changelog              : Index HEALING_PK created 
+2023-05-11 10:00:11.569  INFO 1 - [       main] liquibase.changelog              : Foreign key constraint added to HEALING (SELECTOR_ID) 
+2023-05-11 10:00:11.570  INFO 1 - [       main] liquibase.changelog              : ChangeSet changelog/003_healing.xml::8::nkobzev ran successfully in 45ms 
+2023-05-11 10:00:11.580  INFO 1 - [       main] liquibase.changelog              : Table HEALING_RESULT created 
+2023-05-11 10:00:11.582  INFO 1 - [       main] liquibase.changelog              : ChangeSet changelog/004_healingResult.xml::9::nkobzev ran successfully in 5ms 
+2023-05-11 10:00:11.609  INFO 1 - [       main] liquibase.changelog              : Index HEALING_RESULT_PK created 
+2023-05-11 10:00:11.612  INFO 1 - [       main] liquibase.changelog              : Foreign key constraint added to HEALING_RESULT (HEALING_ID) 
+2023-05-11 10:00:11.613  INFO 1 - [       main] liquibase.changelog              : ChangeSet changelog/004_healingResult.xml::10::nkobzev ran successfully in 28ms 
+2023-05-11 10:00:11.629  INFO 1 - [       main] liquibase.changelog              : Table REPORT created 
+2023-05-11 10:00:11.631  INFO 1 - [       main] liquibase.changelog              : ChangeSet changelog/005_report.xml::11::nkobzev ran successfully in 10ms 
+2023-05-11 10:00:11.667  INFO 1 - [       main] liquibase.changelog              : Index REPORT_PK created 
+2023-05-11 10:00:11.670  INFO 1 - [       main] liquibase.changelog              : ChangeSet changelog/005_report.xml::12::nkobzev ran successfully in 32ms 
+2023-05-11 10:00:11.689  INFO 1 - [       main] liquibase.changelog              : Columns COMMAND(VARCHAR(264)),ENABLE_HEALING(BOOLEAN) added to SELECTOR 
+2023-05-11 10:00:11.691  INFO 1 - [       main] liquibase.changelog              : ChangeSet changelog/006_command_and_healingenable_column.xml::13::nkobzev ran successfully in 15ms 
+2023-05-11 10:00:11.699  INFO 1 - [       main] liquibase.lockservice            : Successfully released change log lock 
+2023-05-11 10:00:12.257  INFO 1 - [       main] o.h.j.internal.util.LogHelper    : HHH000204: Processing PersistenceUnitInfo [name: default] 
+2023-05-11 10:00:12.463  INFO 1 - [       main] org.hibernate.Version            : HHH000412: Hibernate ORM core version 5.6.9.Final 
+2023-05-11 10:00:13.082  INFO 1 - [       main] o.h.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final} 
+2023-05-11 10:00:13.324  INFO 1 - [       main] org.hibernate.dialect.Dialect    : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect 
+2023-05-11 10:00:15.540  WARN 1 - [       main] o.h.m.internal.MetadataContext   : HHH015011: Unable to locate static metamodel field : com.epam.healenium.model.domain.Selector_#nodePathWrapper; this may or may not indicate a problem with the static metamodel 
+2023-05-11 10:00:15.573  INFO 1 - [       main] h.e.t.j.p.i.JtaPlatformInitiator : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform] 
+2023-05-11 10:00:15.598  INFO 1 - [       main] ontainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default' 
+2023-05-11 10:00:18.392  INFO 1 - [       main] .a.w.s.WelcomePageHandlerMapping : Adding welcome page template: index 
+2023-05-11 10:00:19.773  INFO 1 - [       main] .s.b.a.e.w.EndpointLinksResolver : Exposing 1 endpoint(s) beneath base path '/actuator' 
+2023-05-11 10:00:19.941  INFO 1 - [       main] o.s.b.w.e.t.TomcatWebServer      : Tomcat started on port(s): 7878 (http) with context path '' 
+2023-05-11 10:00:20.153  INFO 1 - [       main] com.epam.healenium.Application   : Started Application in 22.538 seconds (JVM running for 24.486) 
+2023-05-11 10:01:13.696  INFO 1 - [hutdownHook] ontainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default' 
+2023-05-11 10:01:13.749  INFO 1 - [hutdownHook] c.z.hikari.HikariDataSource      : HikariPool-1 - Shutdown initiated... 
+2023-05-11 10:01:13.795  INFO 1 - [hutdownHook] c.z.hikari.HikariDataSource      : HikariPool-1 - Shutdown completed. 
+2023-05-11 10:01:23.468  INFO 1 - [       main] com.epam.healenium.Application   : Starting Application using Java 1.8.0_212 on 03871d0eb79d with PID 1 (/healenium-backend.jar started by root in /) 
+2023-05-11 10:01:23.480  INFO 1 - [       main] com.epam.healenium.Application   : No active profile set, falling back to 1 default profile: "default" 
+2023-05-11 10:01:27.319  INFO 1 - [       main] .RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode. 
+2023-05-11 10:01:27.967  INFO 1 - [       main] .RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 619 ms. Found 4 JPA repository interfaces. 
+2023-05-11 10:01:30.728  INFO 1 - [       main] o.s.b.w.e.t.TomcatWebServer      : Tomcat initialized with port(s): 7878 (http) 
+2023-05-11 10:01:30.767  INFO 1 - [       main] o.a.c.core.StandardService       : Starting service [Tomcat] 
+2023-05-11 10:01:30.770  INFO 1 - [       main] o.a.c.core.StandardEngine        : Starting Servlet engine: [Apache Tomcat/9.0.64] 
+2023-05-11 10:01:31.051  INFO 1 - [       main] o.a.c.c.C.[.[localhost].[/]      : Initializing Spring embedded WebApplicationContext 
+2023-05-11 10:01:31.055  INFO 1 - [       main] rvletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 7392 ms 
+2023-05-11 10:01:32.056  INFO 1 - [       main] c.z.hikari.HikariDataSource      : HikariPool-1 - Starting... 
+2023-05-11 10:01:32.221  INFO 1 - [       main] c.z.hikari.HikariDataSource      : HikariPool-1 - Start completed. 
+2023-05-11 10:01:32.457  INFO 1 - [       main] liquibase.database               : Set default schema name to healenium 
+2023-05-11 10:01:32.726  INFO 1 - [       main] liquibase.lockservice            : Successfully acquired change log lock 
+2023-05-11 10:01:34.182  INFO 1 - [       main] liquibase.changelog              : Creating database history table with name: healenium.databasechangelog 
+2023-05-11 10:01:34.195  INFO 1 - [       main] liquibase.changelog              : Reading from healenium.databasechangelog 
+2023-05-11 10:01:34.519  INFO 1 - [       main] liquibase.changelog              : Sequence healing_result_seq created 
+2023-05-11 10:01:34.523  INFO 1 - [       main] liquibase.changelog              : ChangeSet changelog/001_createSequence.xml::3::nkobzev ran successfully in 9ms 
+2023-05-11 10:01:34.537  INFO 1 - [       main] liquibase.changelog              : Table SELECTOR created 
+2023-05-11 10:01:34.539  INFO 1 - [       main] liquibase.changelog              : ChangeSet changelog/002_selector.xml::5::nkobzev ran successfully in 7ms 
+2023-05-11 10:01:34.582  INFO 1 - [       main] liquibase.changelog              : Index SELECTOR_PK created 
+2023-05-11 10:01:34.585  INFO 1 - [       main] liquibase.changelog              : ChangeSet changelog/002_selector.xml::6::nkobzev ran successfully in 42ms 
+2023-05-11 10:01:34.607  INFO 1 - [       main] liquibase.changelog              : Table HEALING created 
+2023-05-11 10:01:34.609  INFO 1 - [       main] liquibase.changelog              : ChangeSet changelog/003_healing.xml::7::nkobzev ran successfully in 15ms 
+2023-05-11 10:01:34.645  INFO 1 - [       main] liquibase.changelog              : Index HEALING_PK created 
+2023-05-11 10:01:34.658  INFO 1 - [       main] liquibase.changelog              : Foreign key constraint added to HEALING (SELECTOR_ID) 
+2023-05-11 10:01:34.660  INFO 1 - [       main] liquibase.changelog              : ChangeSet changelog/003_healing.xml::8::nkobzev ran successfully in 45ms 
+2023-05-11 10:01:34.670  INFO 1 - [       main] liquibase.changelog              : Table HEALING_RESULT created 
+2023-05-11 10:01:34.671  INFO 1 - [       main] liquibase.changelog              : ChangeSet changelog/004_healingResult.xml::9::nkobzev ran successfully in 6ms 
+2023-05-11 10:01:34.700  INFO 1 - [       main] liquibase.changelog              : Index HEALING_RESULT_PK created 
+2023-05-11 10:01:34.703  INFO 1 - [       main] liquibase.changelog              : Foreign key constraint added to HEALING_RESULT (HEALING_ID) 
+2023-05-11 10:01:34.704  INFO 1 - [       main] liquibase.changelog              : ChangeSet changelog/004_healingResult.xml::10::nkobzev ran successfully in 30ms 
+2023-05-11 10:01:34.721  INFO 1 - [       main] liquibase.changelog              : Table REPORT created 
+2023-05-11 10:01:34.723  INFO 1 - [       main] liquibase.changelog              : ChangeSet changelog/005_report.xml::11::nkobzev ran successfully in 14ms 
+2023-05-11 10:01:34.759  INFO 1 - [       main] liquibase.changelog              : Index REPORT_PK created 
+2023-05-11 10:01:34.761  INFO 1 - [       main] liquibase.changelog              : ChangeSet changelog/005_report.xml::12::nkobzev ran successfully in 31ms 
+2023-05-11 10:01:34.778  INFO 1 - [       main] liquibase.changelog              : Columns COMMAND(VARCHAR(264)),ENABLE_HEALING(BOOLEAN) added to SELECTOR 
+2023-05-11 10:01:34.780  INFO 1 - [       main] liquibase.changelog              : ChangeSet changelog/006_command_and_healingenable_column.xml::13::nkobzev ran successfully in 14ms 
+2023-05-11 10:01:34.787  INFO 1 - [       main] liquibase.lockservice            : Successfully released change log lock 
+2023-05-11 10:01:35.420  INFO 1 - [       main] o.h.j.internal.util.LogHelper    : HHH000204: Processing PersistenceUnitInfo [name: default] 
+2023-05-11 10:01:35.543  INFO 1 - [       main] org.hibernate.Version            : HHH000412: Hibernate ORM core version 5.6.9.Final 
+2023-05-11 10:01:36.053  INFO 1 - [       main] o.h.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final} 
+2023-05-11 10:01:36.297  INFO 1 - [       main] org.hibernate.dialect.Dialect    : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect 
+2023-05-11 10:01:38.542  WARN 1 - [       main] o.h.m.internal.MetadataContext   : HHH015011: Unable to locate static metamodel field : com.epam.healenium.model.domain.Selector_#nodePathWrapper; this may or may not indicate a problem with the static metamodel 
+2023-05-11 10:01:38.570  INFO 1 - [       main] h.e.t.j.p.i.JtaPlatformInitiator : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform] 
+2023-05-11 10:01:38.589  INFO 1 - [       main] ontainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default' 
+2023-05-11 10:01:41.349  INFO 1 - [       main] .a.w.s.WelcomePageHandlerMapping : Adding welcome page template: index 
+2023-05-11 10:01:42.872  INFO 1 - [       main] .s.b.a.e.w.EndpointLinksResolver : Exposing 1 endpoint(s) beneath base path '/actuator' 
+2023-05-11 10:01:43.029  INFO 1 - [       main] o.s.b.w.e.t.TomcatWebServer      : Tomcat started on port(s): 7878 (http) with context path '' 
+2023-05-11 10:01:43.241  INFO 1 - [       main] com.epam.healenium.Application   : Started Application in 22.156 seconds (JVM running for 23.948) 
+2023-05-11 10:02:33.234  INFO 1 - [7878-exec-1] o.a.c.c.C.[.[localhost].[/]      : Initializing Spring DispatcherServlet 'dispatcherServlet' 
+2023-05-11 10:02:33.251  INFO 1 - [7878-exec-1] o.s.w.s.DispatcherServlet        : Initializing Servlet 'dispatcherServlet' 
+2023-05-11 10:02:33.268  INFO 1 - [7878-exec-1] o.s.w.s.DispatcherServlet        : Completed initialization in 15 ms 
+2023-05-11 10:02:36.143  INFO 1 - [7878-exec-3] healenium                        : [Save Elements] Request: By.id(firstName) 
+2023-05-11 10:02:36.521  INFO 1 - [7878-exec-4] healenium                        : [Save Elements] Request: By.id(lastName) 
+2023-05-11 10:02:36.664  INFO 1 - [7878-exec-5] healenium                        : [Save Elements] Request: By.id(username) 
+2023-05-11 10:02:36.821  INFO 1 - [7878-exec-6] healenium                        : [Save Elements] Request: By.id(email) 
+2023-05-11 10:02:36.899  INFO 1 - [7878-exec-7] healenium                        : [Save Elements] Request: By.id(address1) 
+2023-05-11 10:02:36.969  INFO 1 - [7878-exec-8] healenium                        : [Save Elements] Request: By.id(address2) 
+2023-05-11 10:02:37.045  INFO 1 - [7878-exec-9] healenium                        : [Save Elements] Request: By.id(country) 
+2023-05-11 10:02:37.145  INFO 1 - [878-exec-10] healenium                        : [Save Elements] Request: [By.xpath(.//option[normalize-space(.) = "United States"]] on page null) 
+2023-05-11 10:02:37.352  INFO 1 - [7878-exec-1] healenium                        : [Save Elements] Request: By.id(state) 
+2023-05-11 10:02:37.398  INFO 1 - [7878-exec-2] healenium                        : [Save Elements] Request: [By.xpath(.//option[normalize-space(.) = "California"]] on page null) 
+2023-05-11 10:02:37.528  INFO 1 - [7878-exec-3] healenium                        : [Save Elements] Request: By.id(zip) 
+2023-05-11 10:02:37.621  INFO 1 - [7878-exec-4] healenium                        : [Save Elements] Request: By.id(cc-name) 
+2023-05-11 10:02:37.700  INFO 1 - [7878-exec-5] healenium                        : [Save Elements] Request: By.id(cc-number) 
+2023-05-11 10:02:37.769  INFO 1 - [7878-exec-6] healenium                        : [Save Elements] Request: By.id(card-expiration) 
+2023-05-11 10:02:37.826  INFO 1 - [7878-exec-7] healenium                        : [Save Elements] Request: By.id(card-cvv) 
+2023-05-11 10:02:37.891  INFO 1 - [7878-exec-8] healenium                        : [Save Elements] Request: By.xpath(//button[text()='Checkout']) 
+2023-05-11 10:06:49.584  INFO 1 - [7878-exec-2] healenium                        : [Save Elements] Request: By.id(firstName) 
+2023-05-11 10:06:50.175  INFO 1 - [7878-exec-3] healenium                        : [Save Elements] Request: By.id(lastName) 
+2023-05-11 10:06:50.299  INFO 1 - [7878-exec-4] healenium                        : [Save Elements] Request: By.id(username) 
+2023-05-11 10:06:50.440  INFO 1 - [7878-exec-5] healenium                        : [Save Elements] Request: By.id(email) 
+2023-05-11 10:06:50.525  INFO 1 - [7878-exec-6] healenium                        : [Save Elements] Request: By.id(address1) 
+2023-05-11 10:06:50.609  INFO 1 - [7878-exec-7] healenium                        : [Save Elements] Request: By.id(address2) 
+2023-05-11 10:06:50.692  INFO 1 - [7878-exec-8] healenium                        : [Save Elements] Request: By.id(country) 
+2023-05-11 10:06:50.783  INFO 1 - [7878-exec-9] healenium                        : [Save Elements] Request: [By.xpath(.//option[normalize-space(.) = "United States"]] on page null) 
+2023-05-11 10:06:51.006  INFO 1 - [878-exec-10] healenium                        : [Save Elements] Request: By.id(state) 
+2023-05-11 10:06:51.038  INFO 1 - [7878-exec-1] healenium                        : [Save Elements] Request: [By.xpath(.//option[normalize-space(.) = "California"]] on page null) 
+2023-05-11 10:06:51.151  INFO 1 - [7878-exec-2] healenium                        : [Save Elements] Request: By.id(zip) 
+2023-05-11 10:06:51.246  INFO 1 - [7878-exec-3] healenium                        : [Save Elements] Request: By.id(cc-name) 
+2023-05-11 10:06:51.313  INFO 1 - [7878-exec-4] healenium                        : [Save Elements] Request: By.id(cc-number) 
+2023-05-11 10:06:51.376  INFO 1 - [7878-exec-5] healenium                        : [Save Elements] Request: By.id(card-expiration) 
+2023-05-11 10:06:51.434  INFO 1 - [7878-exec-6] healenium                        : [Save Elements] Request: By.id(card-cvv) 
+2023-05-11 10:06:51.553  INFO 1 - [7878-exec-7] healenium                        : [Get Reference] Request: RequestDto(locator=//button[text()='Checkout'], className=page.CheckoutPage, methodName=clickCheckoutButton, command=findElement, url=file:///Users/anoopsindhu/IdeaProjects/healenium-demo/target/classes/checkout/index.html)) 
+2023-05-11 10:07:48.566  INFO 1 - [7878-exec-2] healenium                        : [Save Elements] Request: By.id(firstName) 
+2023-05-11 10:07:49.079  INFO 1 - [7878-exec-3] healenium                        : [Save Elements] Request: By.id(lastName) 
+2023-05-11 10:07:49.245  INFO 1 - [7878-exec-4] healenium                        : [Save Elements] Request: By.id(username) 
+2023-05-11 10:07:49.405  INFO 1 - [7878-exec-5] healenium                        : [Save Elements] Request: By.id(email) 
+2023-05-11 10:07:49.490  INFO 1 - [7878-exec-6] healenium                        : [Save Elements] Request: By.id(address1) 
+2023-05-11 10:07:49.568  INFO 1 - [7878-exec-7] healenium                        : [Save Elements] Request: By.id(address2) 
+2023-05-11 10:07:49.636  INFO 1 - [7878-exec-8] healenium                        : [Save Elements] Request: By.id(country) 
+2023-05-11 10:07:49.731  INFO 1 - [7878-exec-9] healenium                        : [Save Elements] Request: [By.xpath(.//option[normalize-space(.) = "United States"]] on page null) 
+2023-05-11 10:07:49.915  INFO 1 - [878-exec-10] healenium                        : [Save Elements] Request: By.id(state) 
+2023-05-11 10:07:49.974  INFO 1 - [7878-exec-1] healenium                        : [Save Elements] Request: [By.xpath(.//option[normalize-space(.) = "California"]] on page null) 
+2023-05-11 10:07:50.089  INFO 1 - [7878-exec-2] healenium                        : [Save Elements] Request: By.id(zip) 
+2023-05-11 10:07:50.175  INFO 1 - [7878-exec-3] healenium                        : [Save Elements] Request: By.id(cc-name) 
+2023-05-11 10:07:50.246  INFO 1 - [7878-exec-4] healenium                        : [Save Elements] Request: By.id(cc-number) 
+2023-05-11 10:07:50.305  INFO 1 - [7878-exec-5] healenium                        : [Save Elements] Request: By.id(card-expiration) 
+2023-05-11 10:07:50.364  INFO 1 - [7878-exec-6] healenium                        : [Save Elements] Request: By.id(card-cvv) 
+2023-05-11 10:07:50.421  INFO 1 - [7878-exec-7] healenium                        : [Save Elements] Request: By.xpath(//button[text()='Checkout']) 
+2023-05-11 10:08:23.406  INFO 1 - [7878-exec-1] healenium                        : [Save Elements] Request: By.id(firstName) 
+2023-05-11 10:08:23.918  INFO 1 - [7878-exec-2] healenium                        : [Save Elements] Request: By.id(lastName) 
+2023-05-11 10:08:24.096  INFO 1 - [7878-exec-3] healenium                        : [Save Elements] Request: By.id(username) 
+2023-05-11 10:08:24.231  INFO 1 - [7878-exec-4] healenium                        : [Get Reference] Request: RequestDto(locator=email, className=page.CheckoutPage, methodName=inputEmail, command=findElement, url=file:///Users/anoopsindhu/IdeaProjects/healenium-demo/target/classes/checkout/index.html)) 
+2023-05-11 10:08:25.033  INFO 1 - [7878-exec-6] healenium                        : [Save Elements] Request: By.id(address1) 
+2023-05-11 10:08:25.147  INFO 1 - [7878-exec-7] healenium                        : [Save Elements] Request: By.id(address2) 
+2023-05-11 10:08:25.241  INFO 1 - [7878-exec-8] healenium                        : [Save Elements] Request: By.id(country) 
+2023-05-11 10:08:25.332  INFO 1 - [7878-exec-9] healenium                        : [Save Elements] Request: [By.xpath(.//option[normalize-space(.) = "United States"]] on page null) 
+2023-05-11 10:08:25.534  INFO 1 - [878-exec-10] healenium                        : [Save Elements] Request: By.id(state) 
+2023-05-11 10:08:25.570  INFO 1 - [7878-exec-1] healenium                        : [Save Elements] Request: [By.xpath(.//option[normalize-space(.) = "California"]] on page null) 
+2023-05-11 10:08:25.691  INFO 1 - [7878-exec-2] healenium                        : [Save Elements] Request: By.id(zip) 
+2023-05-11 10:08:25.760  INFO 1 - [7878-exec-3] healenium                        : [Save Elements] Request: By.id(cc-name) 
+2023-05-11 10:08:25.824  INFO 1 - [7878-exec-4] healenium                        : [Save Elements] Request: By.id(cc-number) 
+2023-05-11 10:08:25.893  INFO 1 - [7878-exec-5] healenium                        : [Save Elements] Request: By.id(card-expiration) 
+2023-05-11 10:08:25.945  INFO 1 - [7878-exec-6] healenium                        : [Save Elements] Request: By.id(card-cvv) 
+2023-05-11 10:08:26.003  INFO 1 - [7878-exec-7] healenium                        : [Save Elements] Request: By.xpath(//button[text()='Checkout']) 
+2023-05-11 18:08:26.717  INFO 1 - [7878-exec-2] healenium                        : [Save Elements] Request: By.id(firstName) 
+2023-05-11 18:08:27.142  INFO 1 - [7878-exec-3] healenium                        : [Save Elements] Request: By.id(lastName) 
+2023-05-11 18:08:27.220  INFO 1 - [7878-exec-4] healenium                        : [Save Elements] Request: By.id(username) 
+2023-05-11 18:08:27.321  INFO 1 - [7878-exec-5] healenium                        : [Save Elements] Request: By.id(email) 
+2023-05-11 18:08:27.385  INFO 1 - [7878-exec-6] healenium                        : [Save Elements] Request: By.id(address1) 
+2023-05-11 18:08:27.449  INFO 1 - [7878-exec-7] healenium                        : [Save Elements] Request: By.id(address2) 
+2023-05-11 18:08:27.494  INFO 1 - [7878-exec-9] healenium                        : [Save Elements] Request: By.id(country) 
+2023-05-11 18:08:27.575  INFO 1 - [7878-exec-8] healenium                        : [Save Elements] Request: [By.xpath(.//option[normalize-space(.) = "United States"]] on page null) 
+2023-05-11 18:08:27.719  INFO 1 - [878-exec-10] healenium                        : [Save Elements] Request: By.id(state) 
+2023-05-11 18:08:27.755  INFO 1 - [7878-exec-1] healenium                        : [Save Elements] Request: [By.xpath(.//option[normalize-space(.) = "California"]] on page null) 
+2023-05-11 18:08:27.829  INFO 1 - [7878-exec-2] healenium                        : [Save Elements] Request: By.id(zip) 
+2023-05-11 18:08:27.897  INFO 1 - [7878-exec-3] healenium                        : [Save Elements] Request: By.id(cc-name) 
+2023-05-11 18:08:27.956  INFO 1 - [7878-exec-4] healenium                        : [Save Elements] Request: By.id(cc-number) 
+2023-05-11 18:08:27.992  INFO 1 - [7878-exec-5] healenium                        : [Save Elements] Request: By.id(card-expiration) 
+2023-05-11 18:08:28.031  INFO 1 - [7878-exec-6] healenium                        : [Save Elements] Request: By.id(card-cvv) 
+2023-05-11 18:08:28.071  INFO 1 - [7878-exec-7] healenium                        : [Save Elements] Request: By.xpath(//button[text()='Checkout']) 
+2023-05-11 18:14:17.413  INFO 1 - [7878-exec-1] healenium                        : [Save Elements] Request: By.id(firstName) 
+2023-05-11 18:14:17.815  INFO 1 - [7878-exec-2] healenium                        : [Save Elements] Request: By.id(lastName) 
+2023-05-11 18:14:17.922  INFO 1 - [7878-exec-3] healenium                        : [Save Elements] Request: By.id(username) 
+2023-05-11 18:14:18.051  INFO 1 - [7878-exec-4] healenium                        : [Get Reference] Request: RequestDto(locator=email, className=page.CheckoutPage, methodName=inputEmail, command=findElement, url=file:///Users/anoopsindhu/IdeaProjects/healenium-demo/target/classes/checkout/index.html)) 
+2023-05-11 18:14:18.675  INFO 1 - [7878-exec-6] healenium                        : [Save Elements] Request: By.id(address1) 
+2023-05-11 18:14:18.796  INFO 1 - [7878-exec-7] healenium                        : [Save Elements] Request: By.id(address2) 
+2023-05-11 18:14:19.085  INFO 1 - [7878-exec-8] healenium                        : [Save Elements] Request: By.id(country) 
+2023-05-11 18:14:19.095  INFO 1 - [878-exec-10] healenium                        : [Save Elements] Request: By.id(state) 
+2023-05-11 18:14:19.086  INFO 1 - [7878-exec-9] healenium                        : [Save Elements] Request: [By.xpath(.//option[normalize-space(.) = "United States"]] on page null) 
+2023-05-11 18:14:19.242  INFO 1 - [7878-exec-2] healenium                        : [Save Elements] Request: By.id(zip) 
+2023-05-11 18:14:19.242  INFO 1 - [7878-exec-1] healenium                        : [Save Elements] Request: [By.xpath(.//option[normalize-space(.) = "California"]] on page null) 
+2023-05-11 18:14:19.627  INFO 1 - [7878-exec-3] healenium                        : [Save Elements] Request: By.id(cc-name) 
+2023-05-11 18:14:19.739  INFO 1 - [7878-exec-4] healenium                        : [Save Elements] Request: By.id(cc-number) 
+2023-05-11 18:14:19.877  INFO 1 - [7878-exec-1] healenium                        : [Save Elements] Request: By.id(card-cvv) 
+2023-05-11 18:14:19.878  INFO 1 - [7878-exec-2] healenium                        : [Save Elements] Request: By.xpath(//button[text()='Checkout']) 
+2023-05-11 18:14:19.875  INFO 1 - [7878-exec-5] healenium                        : [Save Elements] Request: By.id(card-expiration) 
+2023-05-11 18:16:40.457  INFO 1 - [7878-exec-2] healenium                        : [Save Elements] Request: By.id(firstName) 
+2023-05-11 18:16:40.884  INFO 1 - [7878-exec-5] healenium                        : [Save Elements] Request: By.id(lastName) 
+2023-05-11 18:16:40.997  INFO 1 - [7878-exec-1] healenium                        : [Save Elements] Request: By.id(username) 
+2023-05-11 18:16:41.090  INFO 1 - [7878-exec-7] healenium                        : [Get Reference] Request: RequestDto(locator=email, className=page.CheckoutPage, methodName=inputEmail, command=findElement, url=file:///Users/anoopsindhu/IdeaProjects/healenium-demo/target/classes/checkout/index.html)) 
+2023-05-11 18:16:41.691  INFO 1 - [7878-exec-8] healenium                        : [Save Elements] Request: By.id(address1) 
+2023-05-11 18:16:41.766  INFO 1 - [7878-exec-6] healenium                        : [Save Elements] Request: By.id(address2) 
+2023-05-11 18:16:41.811  INFO 1 - [7878-exec-9] healenium                        : [Save Elements] Request: By.id(country) 
+2023-05-11 18:16:41.877  INFO 1 - [7878-exec-4] healenium                        : [Save Elements] Request: [By.xpath(.//option[normalize-space(.) = "United States"]] on page null) 
+2023-05-11 18:16:42.022  INFO 1 - [7878-exec-3] healenium                        : [Save Elements] Request: By.id(state) 
+2023-05-11 18:16:42.052  INFO 1 - [7878-exec-2] healenium                        : [Save Elements] Request: [By.xpath(.//option[normalize-space(.) = "California"]] on page null) 
+2023-05-11 18:16:42.119  INFO 1 - [7878-exec-5] healenium                        : [Save Elements] Request: By.id(zip) 
+2023-05-11 18:16:42.171  INFO 1 - [7878-exec-1] healenium                        : [Save Elements] Request: By.id(cc-name) 
+2023-05-11 18:16:42.216  INFO 1 - [7878-exec-7] healenium                        : [Save Elements] Request: By.id(cc-number) 
+2023-05-11 18:16:42.281  INFO 1 - [878-exec-10] healenium                        : [Save Elements] Request: By.id(card-expiration) 
+2023-05-11 18:16:42.313  INFO 1 - [7878-exec-8] healenium                        : [Save Elements] Request: By.id(card-cvv) 
+2023-05-11 18:16:42.357  INFO 1 - [7878-exec-6] healenium                        : [Save Elements] Request: By.xpath(//button[text()='Checkout']) 
